@@ -35,3 +35,25 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Logs ###
+logs/
+*.log
+
+### Local config ###
+.env
+.env.*
+application-local.properties
+application-local.yml
+application-local.yaml
+
+### Gradle local ###
+gradle.properties
+
+### OS files ###
+.DS_Store
+Thumbs.db
+
+### Package output ###
+*.jar
+*.war

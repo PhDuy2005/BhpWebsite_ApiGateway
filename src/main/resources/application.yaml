@@ -8,8 +8,8 @@ spring:
   servlet:
     multipart:
       enabled: true
-      max-file-size: 100MB
-      max-request-size: 110MB
+      max-file-size: ${API_GATEWAY_MULTIPART_MAX_FILE_SIZE:100MB}
+      max-request-size: ${API_GATEWAY_MULTIPART_MAX_REQUEST_SIZE:110MB}
 
   cloud:
     gateway:
@@ -71,4 +71,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,gateway
+        include: ${API_GATEWAY_ACTUATOR_EXPOSURE:health,info,gateway}

@@ -72,3 +72,10 @@ management:
     web:
       exposure:
         include: ${API_GATEWAY_ACTUATOR_EXPOSURE:health,info,gateway}
+
+app:
+  rate-limit:
+    enabled: true
+    capacity: 60
+    refill-tokens: 60
+    refill-period-ms: 60000
